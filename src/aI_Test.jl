@@ -5,8 +5,6 @@ module aI_Test
 
 using ForwardDiff
 
-greet() = print("Hello World!")
-
 include("file01.jl")
 
 export my_f, derivative_of_my_f
