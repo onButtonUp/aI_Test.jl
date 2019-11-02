@@ -5,4 +5,5 @@ using Test
     # 2x + 3y
     @test aI_Test.my_f(2,1) == 7
     @test aI_Test.my_f(2,3) == 13
+    @test aI_Test.my_f(1,3) == 11
 end
