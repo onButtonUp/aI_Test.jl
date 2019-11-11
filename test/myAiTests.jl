@@ -23,9 +23,9 @@ end
 #file_dir = joinpath(dirname(@__FILE__), "test")
 
 @testset "real aI testing" begin
-    isfile(joinpath(dirname(@__FILE__),"example.wav"))
+    @test isfile(joinpath(dirname(@__FILE__),"example.wav"))
 #    isfile("example.wav")
 end
 
 # NEW aI TESTS ^^^
-;pwd()
+#;pwd()
