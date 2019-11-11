@@ -1,5 +1,6 @@
 using aI_Test
 using Test
+using WAV
 
 
 # OLD EXAMPLE TESTS vvv
@@ -23,10 +24,21 @@ end
 #file_dir = joinpath(dirname(@__FILE__), "test")
 
 @testset "real aI testing" begin
+    hammerWav = joinpath(dirname(@__FILE__),"Hammerhead.wav")
+
     @test isfile(joinpath(dirname(@__FILE__),"example.wav"))
     @test isfile(joinpath(dirname(@__FILE__),"Hammerhead.wav"))
+    @test isfile(hammerWav)
+    y2, fs2 = WAV.wavread(hammerWav)
+    #fs2 = 48000.0
+    @test fs2 == 48000.0
+    #sqrt(sum(y2.^2.) / length(y2))
+    @test sqrt(sum(y2.^2.) / length(y2)) ≈ 0.16209680234518886
 #    isfile("example.wav")
 end
 
+#fs2
+
 # NEW aI TESTS ^^^
 #;pwd()
+#sqrt(sum(y2.^2.) / length(y2)) == 0.16209680234518886

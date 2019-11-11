@@ -4,6 +4,7 @@
 module aI_Test
 
 using ForwardDiff
+using WAV
 
 include("file01.jl")
 
