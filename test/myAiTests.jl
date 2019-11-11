@@ -24,6 +24,7 @@ end
 
 @testset "real aI testing" begin
     @test isfile(joinpath(dirname(@__FILE__),"example.wav"))
+    @test isfile(joinpath(dirname(@__FILE__),"Hammerhead.wav"))
 #    isfile("example.wav")
 end
 
