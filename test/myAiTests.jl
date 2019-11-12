@@ -38,6 +38,7 @@ end
     #sqrt(sum(y2.^2.) / length(y2))
     #@test sqrt(sum(y2.^2.) / length(y2)) ≈ 0.16209680234518886
     @test sqrt(sum(y2.^2.) / length(y2)) ≈ 0.7070846851353825
+    @test sqrt(sum(x -> x*x, y2) / length(y2)) ≈ 0.7070846851353825
 #    isfile("example.wav")
 end
 
