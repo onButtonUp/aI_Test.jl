@@ -45,6 +45,12 @@ end
     #@test sqrt(sum(y2.^2.) / length(y2)) ≈ 0.16209680234518886
     @test sqrt(sum(y2.^2.) / length(y2)) ≈ 0.7070846851353825
     @test sqrt(sum(x -> x*x, y2) / length(y2)) ≈ 0.7070846851353825
+
+    left_pgm = y_pgm[1:end,1]
+    right_pgm = y_pgm[1:end,2]
+    @test sqrt(sum(x -> x*x, left_pgm) / length(left_pgm)) ≈ 0.06207601152097682
+    @test sqrt(sum(x -> x*x, right_pgm) / length(right_pgm)) ≈ 0.06372897603090126
+
 #    isfile("example.wav")
 end
 
@@ -74,6 +80,10 @@ end
 # fs_pgm
 # nbits_pgm
 # opt_pgm
+# left_pgm = y_pgm[1:end,1]
+# right_pgm = y_pgm[1:end,2]
+# sqrt(sum(x -> x*x, left_pgm) / length(left_pgm))
+# sqrt(sum(x -> x*x, right_pgm) / length(right_pgm))
 # thisIt_pgm = WAV.getformat(opt_pgm)
 ### COMMENTED ^^
 
